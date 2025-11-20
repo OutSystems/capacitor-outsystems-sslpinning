@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.screenreader;
+package com.outsystems.plugins.capacitorsslpinning;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
