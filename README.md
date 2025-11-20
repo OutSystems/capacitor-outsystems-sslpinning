@@ -35,16 +35,6 @@ Refer to our [customer-facing OutSystems docs for more information](https://succ
 
 The Certificate Pins get injected via [build actions](./build-actions/).
 
-## API 
-
-Most of the SSL Pinning logic happens behind the scenes, and so the plugin doesn't need to offer much API-wise.
-
-<docgen-index>
-</docgen-index>
-
-<docgen-api>
-</docgen-api>
-
 ## Credits
 
 - TrustKit authors and collaborators, [https://github.com/datatheorem/TrustKit](https://github.com/datatheorem/TrustKit) - Used For pinning 
