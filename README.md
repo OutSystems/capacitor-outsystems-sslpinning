@@ -14,7 +14,6 @@ If you need to test an OutSystems build pointing to your branch code without pub
 
 1. Set the plugin version to a temporary one (e.g. 5.X.X-test1) on [package.json], create a tag with that same version, and then a release on GitHub that uses that tag. That will trigger this repo's GitHub action that in turn triggers an Azure DevOps pipeline. This pipeline requires manual approval to actually trigger the release to npm (if you cannot approve yourself try asking another team member). After that, you should be able to change the version in the plugin's Extensibility Configurations to the test version that was just generated.
 2. If you don't have access to Azure, you can instead create a personal access token on GitHub (you may even create a fine-grained token to only give access to this repo), and then set the capacitor plugin on OutSystems Extensibility Configurations to be:
-v
 ```json
 {
     "buildConfigurations": {
