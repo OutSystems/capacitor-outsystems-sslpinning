@@ -10,7 +10,8 @@ let package = Package(
             targets: ["OutSystemsSSLPinningPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "8.0.0-beta")
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "8.0.0-beta"),
+        .package(url: "https://github.com/OutSystems/TrustKit", exact: "3.0.7+1.0.0")
     ],
     targets: [
         .target(
