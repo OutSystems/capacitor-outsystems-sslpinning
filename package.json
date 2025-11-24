@@ -9,6 +9,7 @@
     "android/build.gradle",
     "dist/",
     "ios/Sources/",
+    "ios/TrustKit.xcframework",
     "Package.swift",
     "OutsystemsCapacitorOutsystemsSslpinning.podspec"
   ],
