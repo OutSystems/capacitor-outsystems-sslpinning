@@ -7,8 +7,9 @@ public class OkHttpClientWrapper {
     private static OkHttpClientWrapper instance;
 
     private OkHttpClient client;
+
     private OkHttpClientWrapper() {
-        if(client == null) {
+        if (client == null) {
             OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
             clientBuilder.retryOnConnectionFailure(false);
             client = clientBuilder.build();
@@ -16,7 +17,7 @@ public class OkHttpClientWrapper {
     }
 
     public static OkHttpClientWrapper getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new OkHttpClientWrapper();
         }
 

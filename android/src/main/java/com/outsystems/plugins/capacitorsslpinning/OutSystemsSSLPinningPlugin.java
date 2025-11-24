@@ -1,18 +1,14 @@
 package com.outsystems.plugins.capacitorsslpinning;
 
 import androidx.annotation.NonNull;
-
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import com.outsystems.plugins.capacitorsslpinning.pinning.OkHttpClientWrapper;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import javax.net.ssl.SSLPeerUnverifiedException;
-
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.ConnectionPool;
@@ -41,30 +37,33 @@ public class OutSystemsSSLPinningPlugin extends Plugin {
 
             int timeout = 10000;
 
-            OkHttpClient.Builder builder = getHttpClientBuilder().connectTimeout(timeout, TimeUnit.MILLISECONDS).readTimeout(timeout, TimeUnit.MILLISECONDS);
+            OkHttpClient.Builder builder = getHttpClientBuilder()
+                .connectTimeout(timeout, TimeUnit.MILLISECONDS)
+                .readTimeout(timeout, TimeUnit.MILLISECONDS);
             OkHttpClient client = builder.build();
 
             Call call = client.newCall(request);
 
-            call.enqueue(new Callback() {
-                @Override
-                public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                    if (e instanceof SSLPeerUnverifiedException) {
-                        pluginCall.reject("SSLPinning found a issue with the configured certificate for the url!", "1");
-                    } else {
-                        pluginCall.reject("SSLPinning found some problem with the request!", "2");
+            call.enqueue(
+                new Callback() {
+                    @Override
+                    public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                        if (e instanceof SSLPeerUnverifiedException) {
+                            pluginCall.reject("SSLPinning found a issue with the configured certificate for the url!", "1");
+                        } else {
+                            pluginCall.reject("SSLPinning found some problem with the request!", "2");
+                        }
+                    }
+
+                    @Override
+                    public void onResponse(@NonNull Call call, @NonNull Response response) {
+                        pluginCall.resolve();
                     }
                 }
-
-                @Override
-                public void onResponse(@NonNull Call call, @NonNull Response response) {
-                    pluginCall.resolve();
-                }
-            });
+            );
         } catch (Exception e) {
             pluginCall.reject("SSLPinning found some problem with the request!", "2");
         }
-
     }
 
     private OkHttpClient.Builder getHttpClientBuilder() {
