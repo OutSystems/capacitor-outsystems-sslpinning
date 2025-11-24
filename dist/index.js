@@ -4,4 +4,3 @@ const OutSystemsSSLPinning = registerPlugin('OutSystemsSSLPinning', {
 });
 export * from './definitions';
 export { OutSystemsSSLPinning };
-//# sourceMappingURL=index.js.map

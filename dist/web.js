@@ -4,4 +4,3 @@ export class OutSystemsSSLPinningWeb extends WebPlugin {
         throw this.unavailable(`This plugin is not available in the browser - cannot check certificate for ${options.url}`);
     }
 }
-//# sourceMappingURL=web.js.map
