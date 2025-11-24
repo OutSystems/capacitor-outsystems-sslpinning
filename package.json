@@ -10,7 +10,7 @@
     "dist/",
     "ios/Sources/",
     "Package.swift",
-    "OutSystemsCapacitorSSLPinning.podspec"
+    "OutsystemsCapacitorOutsystemsSslpinning.podspec"
   ],
   "author": "OutSystems",
   "license": "MIT",
