@@ -1,9 +1,0 @@
-.idea
-.vscode
-.github
-ci
-node_modules
-azure-pipelines.yml
-CHANGELOG.md
-commitlint.config.js
-*-outsystems-sslpinning-*.tgz
