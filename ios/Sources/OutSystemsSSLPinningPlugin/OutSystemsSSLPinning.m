@@ -35,7 +35,8 @@
             if (connectionError == nil) {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
             } else {
-                if (connectionError.code == -1012 && data == nil) {
+                // Check for cancelled error codes - TrustKit cancels authentication challenge if pinning is invalid
+                if ((connectionError.code == -1012 || connectionError.code == -999) && data == nil) {
                     [call reject:@"SSLPinning found a issue with the configured certificate for the url!" :@"1" :nil :nil];
                 } else {
                     [call reject:@"SSLPinning found some problem with the request!" :@"2" :nil :nil];
