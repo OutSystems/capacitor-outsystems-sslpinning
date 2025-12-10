@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "OutSystemsCapacitorOutSystemsSSLPinning",
+    name: "OutsystemsCapacitorOutsystemsSslpinning",
     platforms: [.iOS(.v15)],
     products: [
         .library(
-            name: "OutSystemsCapacitorOutSystemsSSLPinning",
+            name: "OutsystemsCapacitorOutsystemsSslpinning",
             targets: ["OutSystemsSSLPinningPlugin"])
     ],
     dependencies: [
