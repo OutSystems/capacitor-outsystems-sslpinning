@@ -23,6 +23,8 @@ public class OutSystemsSSLPinningPlugin extends Plugin {
     // See https://square.github.io/okhttp/3.x/okhttp/okhttp3/ConnectionPool.html
     private static final int CON_MAX_IDLE_CONNECTIONS_DEFAULT = 5;
     private static final int CON_KEEP_ALIVE_DEFAULT = 300;
+    private static final String ERROR_CODE_CERTIFICATE = "1";
+    private static final String ERROR_CODE_GENERIC = "2";
 
     @PluginMethod
     @SuppressWarnings("unused")
@@ -49,9 +51,9 @@ public class OutSystemsSSLPinningPlugin extends Plugin {
                     @Override
                     public void onFailure(@NonNull Call call, @NonNull IOException e) {
                         if (e instanceof SSLPeerUnverifiedException) {
-                            pluginCall.reject("SSLPinning found a issue with the configured certificate for the url!", "1");
+                            pluginCall.reject("SSLPinning found a issue with the configured certificate for the url!", ERROR_CODE_CERTIFICATE);
                         } else {
-                            pluginCall.reject("SSLPinning found some problem with the request!", "2");
+                            pluginCall.reject("SSLPinning found some problem with the request!", ERROR_CODE_GENERIC);
                         }
                     }
 
