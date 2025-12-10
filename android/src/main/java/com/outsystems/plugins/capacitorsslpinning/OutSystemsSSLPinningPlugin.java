@@ -51,7 +51,10 @@ public class OutSystemsSSLPinningPlugin extends Plugin {
                     @Override
                     public void onFailure(@NonNull Call call, @NonNull IOException e) {
                         if (e instanceof SSLPeerUnverifiedException) {
-                            pluginCall.reject("SSLPinning found a issue with the configured certificate for the url!", ERROR_CODE_CERTIFICATE);
+                            pluginCall.reject(
+                                "SSLPinning found a issue with the configured certificate for the url!",
+                                ERROR_CODE_CERTIFICATE
+                            );
                         } else {
                             pluginCall.reject("SSLPinning found some problem with the request!", ERROR_CODE_GENERIC);
                         }
