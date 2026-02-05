@@ -52,8 +52,9 @@ public class OutSystemsSSLPinningPlugin extends Plugin {
                 new Callback() {
                     @Override
                     public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                        if (e instanceof SSLPeerUnverifiedException ||
-                                (e instanceof SSLHandshakeException && e.getCause() != null && e.getCause() instanceof CertificateException)
+                        if (
+                            e instanceof SSLPeerUnverifiedException ||
+                            (e instanceof SSLHandshakeException && e.getCause() != null && e.getCause() instanceof CertificateException)
                         ) {
                             pluginCall.reject(
                                 "SSLPinning found a issue with the configured certificate for the url!",
