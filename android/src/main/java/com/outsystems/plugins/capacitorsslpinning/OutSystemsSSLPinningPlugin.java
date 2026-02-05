@@ -7,7 +7,9 @@ import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import com.outsystems.plugins.capacitorsslpinning.pinning.OkHttpClientWrapper;
 import java.io.IOException;
+import java.security.cert.CertificateException;
 import java.util.concurrent.TimeUnit;
+import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -50,7 +52,10 @@ public class OutSystemsSSLPinningPlugin extends Plugin {
                 new Callback() {
                     @Override
                     public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                        if (e instanceof SSLPeerUnverifiedException) {
+                        if (
+                            e instanceof SSLPeerUnverifiedException ||
+                            (e instanceof SSLHandshakeException && e.getCause() != null && e.getCause() instanceof CertificateException)
+                        ) {
                             pluginCall.reject(
                                 "SSLPinning found a issue with the configured certificate for the url!",
                                 ERROR_CODE_CERTIFICATE
