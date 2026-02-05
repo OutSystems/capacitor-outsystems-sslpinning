@@ -1,3 +1,9 @@
+# [1.0.1]
+
+## Fixes
+
+- **Android**: Fix error mapping on invalid certificate pin ([#4](https://github.com/OutSystems/capacitor-outsystems-sslpinning/pull/4))
+
 # [1.0.0]
 
 ## Features
