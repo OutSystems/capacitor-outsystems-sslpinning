@@ -7,7 +7,7 @@ Enables SSL Pinning for OutSystems Capacitor mobile applications (MABS 12 or hig
 This plugin is meant to be used only in OutSystems mobile applications.
 Refer to our [customer-facing OutSystems docs for more information](https://success.outsystems.com/documentation/outsystems_developer_cloud/integration_with_external_systems/mobile_plugins/ssl_pinning_plugin/).
 
-The Certificate Pins get injected via [build actions](./build-actions/).
+The Certificate Pins get injected via [build actions](./build-actions/) by the consuming apps on ODC.
 
 ## Credits
 
