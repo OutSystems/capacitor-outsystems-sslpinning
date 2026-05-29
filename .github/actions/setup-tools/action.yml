@@ -10,4 +10,4 @@ runs:
         node-version: 24
     - name: Install dependencies
       shell: bash
-      run: npm i
+      run: npm ci
