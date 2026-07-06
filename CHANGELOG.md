@@ -1,3 +1,5 @@
+## [1.0.2](https://github.com/OutSystems/capacitor-outsystems-sslpinning/compare/1.0.1...1.0.2) (2026-07-06)
+
 # [1.0.1]
 
 ## Fixes
