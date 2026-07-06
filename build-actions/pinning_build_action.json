@@ -10,7 +10,7 @@
         {
           "resFile": "xml/network_security_config.xml",
           "target": "network-security-config",
-          "inject": "<domain-config>\n  <domain includeSubdomains=\"true\">eng-mobile-dev.outsystems.app</domain>\n  <pin-set>\n    <pin digest=\"SHA-256\">++MBgDH5WGy79Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=</pin>\n    <pin digest=\"SHA-256\">f0KW/FtqTjs108NpYj42SrGvOB2PpxIVM8nWxjPqJGE=</pin>\n    <pin digest=\"SHA-256\">NqvDJlas/GRcYbcWE8S/IceH9cq77kg0jVhZeAPXq8k=</pin>\n    <pin digest=\"SHA-256\">9+ze1cZgR9KO1kZrVDxA4HQ6voHRCSVNz4RdTCx4U8U=</pin>\n    <pin digest=\"SHA-256\">KwccWaCgrnaw6tsrrSO61FgLacNgG2MMLq8GE6+oP5I=</pin>\n    <pin digest=\"SHA-256\">ZsLNL7XHjd3j/zw9tJM7r2BzEU2tuse21boClEsCj60=</pin>\n  </pin-set>\n</domain-config>"
+          "inject": "<domain-config>\n  <domain includeSubdomains=\"true\">eng-mobile-dev.outsystems.app</domain>\n  <pin-set>\n    <pin digest=\"SHA-256\">++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=</pin>\n    <pin digest=\"SHA-256\">f0KW/FtqTjs108NpYj42SrGvOB2PpxIVM8nWxjPqJGE=</pin>\n    <pin digest=\"SHA-256\">NqvDJlas/GRcYbcWE8S/IceH9cq77kg0jVhZeAPXq8k=</pin>\n    <pin digest=\"SHA-256\">9+ze1cZgR9KO1kZrVDxA4HQ6voHRCSVNz4RdTCx4U8U=</pin>\n    <pin digest=\"SHA-256\">KwccWaCgrnaw6tsrrSO61FgLacNgG2MMLq8GE6+oP5I=</pin>\n    <pin digest=\"SHA-256\">ZsLNL7XHjd3j/zw9tJM7r2BzEU2tuse21boClEsCj60=</pin>\n  </pin-set>\n</domain-config>"
         },
         {
           "resFile": "xml/network_security_config.xml",
@@ -49,7 +49,7 @@
                     "TSKEnforcePinning": true,
                     "TSKIncludeSubdomains": false,
                     "TSKPublicKeyHashes": [
-                      "++MBgDH5WGy79Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=",
+                      "++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=",
                       "f0KW/FtqTjs108NpYj42SrGvOB2PpxIVM8nWxjPqJGE=",
                       "NqvDJlas/GRcYbcWE8S/IceH9cq77kg0jVhZeAPXq8k=",
                       "9+ze1cZgR9KO1kZrVDxA4HQ6voHRCSVNz4RdTCx4U8U=",
