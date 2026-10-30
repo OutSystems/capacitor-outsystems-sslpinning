@@ -30,10 +30,8 @@
         [request setURL:[NSURL URLWithString:url]];
         
         NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable connectionError) {
-            CDVPluginResult *pluginResult;
-            
             if (connectionError == nil) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+                [call resolve];
             } else {
                 // Check for cancelled error codes - TrustKit cancels authentication challenge if pinning is invalid
                 if ((connectionError.code == NSURLErrorUserCancelledAuthentication || connectionError.code == NSURLErrorCancelled) && data == nil) {
@@ -42,8 +40,6 @@
                     [call reject:@"SSLPinning found some problem with the request!" :@"2" :nil :nil];
                 }
             }
-            
-            [call resolve];
         }];
         [dataTask resume];
     } else {
