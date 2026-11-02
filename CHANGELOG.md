@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/OutSystems/capacitor-outsystems-sslpinning/compare/1.0.3...1.0.4) (2026-11-02)
+
+
+### Bug Fixes
+
+* **ios:** replace Cordova APIs with Capacitor equivalents in checkCertificate ([#9](https://github.com/OutSystems/capacitor-outsystems-sslpinning/issues/9)) ([bb85b3c](https://github.com/OutSystems/capacitor-outsystems-sslpinning/commit/bb85b3c29da4096b1d49599471fd5b5a48a4f741))
+
 ## [1.0.3](https://github.com/OutSystems/capacitor-outsystems-sslpinning/compare/1.0.2...1.0.3) (2026-08-11)
 
 
