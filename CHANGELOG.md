@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/OutSystems/capacitor-outsystems-sslpinning/compare/1.0.4...1.0.5) (2026-11-20)
+
+
+### Bug Fixes
+
+* **android:** avoid implicit parent project property lookup deprecated in Gradle 9 ([#10](https://github.com/OutSystems/capacitor-outsystems-sslpinning/issues/10)) ([4140b65](https://github.com/OutSystems/capacitor-outsystems-sslpinning/commit/4140b6578e59962aea1e982579c370c454585dbe))
+
 ## [1.0.4](https://github.com/OutSystems/capacitor-outsystems-sslpinning/compare/1.0.3...1.0.4) (2026-11-02)
 
 
